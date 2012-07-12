@@ -1,4 +1,4 @@
-DeloTvoe.rf
+DeloTvoe
 ===========
 
 ДелоТвоё.РФ
