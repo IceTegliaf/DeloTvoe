@@ -40,7 +40,8 @@ def search_media(value):
             cache.set("%s|%s" % (COMPRESSOR_CHACE_PREFIX, value), path_name)        
         return path_name
              
-    return None
+    raise Exception("Can't find media file '%s'" % value)
+#    return None
 
     
 
