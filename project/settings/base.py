@@ -97,7 +97,7 @@ INSTALLED_APPS = [
     
     "sorl.thumbnail",
     "django_evolution",
-    "pagination",
+#    "pagination",
     
     "apps.compressor",
     "apps.projects",
