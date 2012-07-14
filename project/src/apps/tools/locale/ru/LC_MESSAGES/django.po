@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-20 23:30+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templatetags/tools.py:27
+msgid "today"
+msgstr "сегодня"
+
+#: templatetags/tools.py:33 templatetags/tools.py:34
+msgid "yesterday in"
+msgstr "вчера в"
+
+#: templatetags/tools.py:38 templatetags/tools.py:39
+msgid "tomorrow in"
+msgstr "завтра в"
+
+#: templatetags/tools.py:45
+msgid "1 day ago"
+msgstr "день назад"
+
+#: templatetags/tools.py:46
+msgid "2 days ago"
+msgstr "дня назад"
+
+#: templatetags/tools.py:47
+msgid "5 days ago"
+msgstr "дней назад"
+
+#: templatetags/tools.py:50 templatetags/tools.py:80 templatetags/tools.py:103
+msgid "through"
+msgstr "через"
+
+#: templatetags/tools.py:51
+msgid "1 day"
+msgstr "день"
+
+#: templatetags/tools.py:52
+msgid "2 days"
+msgstr "дня"
+
+#: templatetags/tools.py:53
+msgid "5 days"
+msgstr "дней"
+
+#: templatetags/tools.py:72
+msgid "now"
+msgstr "сейчас"
+
+#: templatetags/tools.py:75
+msgid "1 minute ago"
+msgstr "минута назад"
+
+#: templatetags/tools.py:76
+msgid "2 minutes ago"
+msgstr "минуты назад"
+
+#: templatetags/tools.py:77
+msgid "5 minutes ago"
+msgstr "минут назад"
+
+#: templatetags/tools.py:81
+msgid "1 minute"
+msgstr "минута"
+
+#: templatetags/tools.py:82
+msgid "2 minutes"
+msgstr "минуты"
+
+#: templatetags/tools.py:83
+msgid "5 minutes"
+msgstr "минут"
+
+#: templatetags/tools.py:87
+msgid "hour ago"
+msgstr "час назад"
+
+#: templatetags/tools.py:90
+msgid "through hour"
+msgstr "через час"
+
+#: templatetags/tools.py:96
+msgid "1 hour ago"
+msgstr "час назад"
+
+#: templatetags/tools.py:97
+msgid "2 hours ago"
+msgstr "часа назад"
+
+#: templatetags/tools.py:98
+msgid "5 hours ago"
+msgstr "часов назад"
+
+#: templatetags/tools.py:104
+msgid "1 hour"
+msgstr "час"
+
+#: templatetags/tools.py:105
+msgid "2 hours"
+msgstr "часа"
+
+#: templatetags/tools.py:106
+msgid "5 hours"
+msgstr "часов"
+
+#: templatetags/tools.py:147
+msgid "users"
+msgstr "пользователи"
+
+#: templatetags/tools.py:149
+msgid "comments"
+msgstr "комментарии"
+
+#~ msgid "Image"
+#~ msgstr "Картинка"
+
+#~ msgid ""
+#~ "Phone numbers must be in:\n"
+#~ "(XXX) XXX-XX-XX,\n"
+#~ "(XXXX) XX-XX-XX,\n"
+#~ "(XXXXX) X-XX-XX   formats."
+#~ msgstr ""
+#~ "Телефонный номер должен быть в:\n"
+#~ " (XXX) XXX-XX-XX,\n"
+#~ " (XXXX) XX-XX-XX,\n"
+#~ " (XXXXX) X-XX-XX форматах. "
+
+#~ msgid "Field must be float number (ex. 125.55)"
+#~ msgstr "Введите значение в рублях (например 1200.50)"
+
+#~ msgid "Value precision -- maximum %s digits"
+#~ msgstr "Не больше %s знаков после запятой"
+
+#~ msgid "All email must be valid"
+#~ msgstr "Все адреса должны быть правильыми email адресами"
+
+#~ msgid "Misc"
+#~ msgstr "Разное"
+
+#~ msgid "monday"
+#~ msgstr "понедельник"
+
+#~ msgid "tuesday"
+#~ msgstr "вторник"
+
+#~ msgid "wednesday"
+#~ msgstr "среда"
+
+#~ msgid "thursday"
+#~ msgstr "четверг"
+
+#~ msgid "friday"
+#~ msgstr "пятница"
+
+#~ msgid "saturday"
+#~ msgstr "суббота"
+
+#~ msgid "sunday"
+#~ msgstr "воскресение"
+
+#~ msgid "Object not found"
+#~ msgstr "объект не найден"
+
+#~ msgid "Permission error"
+#~ msgstr "ошибка доступа"
+
+#~ msgid "Invalid value"
+#~ msgstr "неверное значение"
+
+#~ msgid "Validatetion error"
+#~ msgstr "ошибка валидации"
+
+#~ msgid "pagination"
+#~ msgstr "перелистование"
+
+#~ msgid "previous"
+#~ msgstr "предыдущий"
+
+#~ msgid "next"
+#~ msgstr "следующий"
+
+#~ msgid "---"
+#~ msgstr "---"

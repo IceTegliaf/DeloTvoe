@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item>
+	<childs>
+		<item name="Миссия-задача">
+			<url name="projects_index"/>
+			<view name="apps.projects.views.index"/>						
+		</item>
+		<item name="Прими участие">
+			<url name="staticpages_page">
+				<address value="join"/>
+			</url>
+			<view name="apps.static_pages.views.page">
+				<address value="join"/>
+			</view>
+		</item>
+		<item name="Наши проекты">
+			<url name="project_list"/>
+			<view name="apps.projects.views.projects"/>
+		</item>
+		<item name="Задать вопрос">
+			<url name="feedback_form"/>
+			<view name="apps.projects.views.projects"/>
+		</item>
+	</childs>	
+</item>

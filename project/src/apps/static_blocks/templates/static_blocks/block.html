@@ -1,0 +1,5 @@
+{% load utils %}
+{% if block.use_title %}<h2>{{ block.title }}{% admin_btn "static_blocks" "block" block.id %}</h2>{% else %}
+{% admin_btn "static_blocks" "block" block.id %}
+{% endif %}
+{{ block.content|safe }}

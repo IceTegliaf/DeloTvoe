@@ -1,0 +1,55 @@
+from apps.simple_feedback.forms import FeedbackForm
+from annoying.decorators import render_to
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from django.utils.encoding import force_unicode
+from django.conf import settings
+from apps.utils.shortcuts import get_settings
+from django.template.loader import render_to_string
+from apps.utils.mail import send_mail
+from django.utils.translation import ugettext
+
+FEEDBACK_EMAILS = get_settings("FEEDBACK_EMAILS", [])
+
+
+@render_to("simple_feedback/form.html")
+def form(req):
+    out={}
+    form_kwargs = {'initial': dict(map(lambda key: (key, force_unicode(req.GET[key])), req.GET))}
+    print "1"     
+    if req.POST:
+        print "2"
+        out['form'] = form = FeedbackForm(req.POST, **form_kwargs)
+        print "3"
+        if form.is_valid():
+            print "4"
+            feedback = form.save()
+            
+            if FEEDBACK_EMAILS:
+                
+                send_mail(
+                    ugettext('%(project_name)s: feedback') % {"project_name": settings.SITE_NAME},
+                    render_to_string("simple_feedback/email.html", {
+                        'site_name': settings.SITE_NAME,
+                        'feedback':feedback, 
+                        'url': '%s/admin/simple_feedback/feedback/%s/' % (settings.SITE_URL, feedback.id),
+                    }),
+                    feedback.email if feedback.email else settings.DEFAULT_FROM,
+                    FEEDBACK_EMAILS,
+                    content_subtype='html'
+                )
+            
+            
+            print "5"
+            return HttpResponseRedirect(reverse("feedback_ok"))
+        
+    else:
+        out['form'] = FeedbackForm(**form_kwargs)
+    return out
+
+
+@render_to("simple_feedback/ok.html")
+def ok(req):
+    print "OK!!!"
+    out={}
+    return out

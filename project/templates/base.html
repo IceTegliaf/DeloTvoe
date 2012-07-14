@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-language" content ="ru">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{% block meta-title %}KEngine{% endblock %}</title>
+    <meta name="keywords" content="{% block meta-keywords %}KEngine{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}KEngine{% endblock %}" />
+    
+		    	
+	<link rel="SHORTCUT ICON" href="/static/i/favicon.ico"/>
+	{% load compressor %}
+	{% block pre-header %}{% endblock %}
+
+	{% compress "bootstrap/css/bootstrap.css" %}
+	{% compress "bootstrap/css/bootstrap-responsive.css" %}
+	{% compress "css/base.css" %}
+	
+	{% compressed_css %}
+	{% compressed_js %}
+	{% block post-header %}{% endblock %}
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</a>	    
+	    		<a class="brand" href="/">ДелоТвоё.РФ</a>	    
+				{% block navbar %}
+					<ul class="nav">			
+					{% for item in cp_xml_menu.root %}
+					  <li{% if item.selected %} class="active"{% endif %}><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
+					{% endfor %}
+					</ul>		
+				{% endblock navbar %}
+			</div>
+		</div>
+	</div>
+	
+	<div class='container'>
+		<div class="row">	
+		{% block page %}
+		<div class="span9">
+			{% block content %}{% endblock content %}
+		</div>
+		<div class="span3">
+			
+		</div>
+		{% endblock page %}
+		</div>
+		
+		<hr/>
+		<footer>
+			<p>2012 - ДелоТвоё, все материалы сайты могут использоваться где и кем угодно только по совести</p>
+		</footer>		
+	</div>
+</body>
+</html>	

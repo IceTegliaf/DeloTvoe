@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load pagination_tags compress_static utils staticpage %}
+
+{% block content %}
+{% get_static_page "feedback" as page %}
+<h1>{{ page.title }}{% admin_btn "staticpages" "page" page.id %}</h1>
+
+{{ page.content }}
+
+
+<div class="feedback">
+<ul>    
+    <li class="head"><div>ОБРАТНАЯ СВЯЗЬ НА ЗАКАЗ ЗАПЧАСТЕЙ</div></li>
+    {{ form.as_ul }}
+</ul>
+</div>
+
+{% endblock content %}

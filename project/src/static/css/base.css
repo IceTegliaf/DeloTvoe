@@ -1,0 +1,15 @@
+body
+{
+	padding-top:60px;	
+}
+
+.form ul
+{
+	list-style: none;
+}
+
+.form ul input[type=text],
+.form ul textarea
+{
+	width:770px;
+}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load pagination_tags compress_static utils staticpage %}
+
+{% block content %}
+{% get_static_page "feedback_ok" as page %}
+<h1>{{ page.title }}{% admin_btn "staticpages" "page" page.id %}</h1>
+
+{{ page.content|safe }}
+
+{% endblock content %}

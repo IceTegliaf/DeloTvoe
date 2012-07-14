@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load i18n tools thumbnail %}
+
+{% block meta-title %}{% if page.seo_title %}{{page.seo_title}}{% else %}{{ page.title }}{% endif %}{% endblock %}
+{% block meta-description %}{{page.seo_description}}{% endblock %}
+{% block meta-keywords %}{{page.seo_keywords}}{% endblock %}   
+
+{% block crumbs %}
+	<li><a href="/">{% trans 'Home page' %}</a><span class="divider">/</span></li>
+	<li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+{% endblock crumbs %}
+
+{% block page-header %}{{ page.title }}{% endblock page-header %}
+
+{% block content %}
+<div class="text">
+{% autoescape off %}{{ page.content }}{% endautoescape %}
+</div>
+
+
+{% endblock content %}

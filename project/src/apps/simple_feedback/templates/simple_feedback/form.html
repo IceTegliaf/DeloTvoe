@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticpage %}
+
+{% block content %}
+	{% get_static_page "feedback" as page %}
+	<div class="page-header">
+		<h1>{{ page.title }}</h1>
+	</div>
+		
+		
+	<div class="alert alert-success">
+		{{ page.content|safe }}	
+	</div>
+	
+	
+	<form class="well">
+		<div class="form">		
+		<ul>    
+		    {{ form.as_ul }}
+		    <li>
+		    	<input type="submit" value="задать вопрос"/>
+		    </li>
+		</ul>
+		</div>
+	
+	</form>
+{% endblock content %}
