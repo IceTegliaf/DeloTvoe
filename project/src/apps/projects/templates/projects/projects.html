@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+{% load staticpage %}
+
+{% block content %}
+	{% get_static_page "projects" as page %}
+	<div class="page-header">
+		<h1>{{ page.title }}</h1>
+	</div>
+	
+	<ul>
+	{% for project in projects %}
+		<li><a href="{{ project.get_absolute_url }}">{{ project }}</a></li>	
+	{% endfor %}
+	</ul>
+	
+	<div class="well">
+		{{ page.content|safe }}
+		<a class="btn btn-primary btn-large" href={% url feedback_form %}>Сообщить свое желание</a>	
+	</div>
+	
+	
+{% endblock content %}

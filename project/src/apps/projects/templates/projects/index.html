@@ -1,1 +1,12 @@
 {% extends "base.html" %}
+{% load staticpage %}
+
+{% block content %}
+	{% get_static_page "index" as page %}
+	
+	<div class="hero-unit">
+        <h1>{{ page.title }}</h1>
+        {{ page.content|safe }}
+        <p><a class="btn btn-primary btn-large" href="{% url staticpages_page 'mission' %}">Узнать больше »</a></p>
+    </div>
+{% endblock content %}

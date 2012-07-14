@@ -2,14 +2,18 @@
 <item>
 	<childs>
 		<item name="Миссия-задача">
-			<url name="projects_index"/>
-			<view name="apps.projects.views.index"/>						
+			<url name="staticpages_page">
+				<address value="mission"/>
+			</url>
+			<view name="apps.staticpages.views.page$">
+				<address value="mission"/>
+			</view>
 		</item>
 		<item name="Прими участие">
 			<url name="staticpages_page">
 				<address value="join"/>
 			</url>
-			<view name="apps.static_pages.views.page">
+			<view name="apps.staticpages.views.page">
 				<address value="join"/>
 			</view>
 		</item>
@@ -17,7 +21,7 @@
 			<url name="project_list"/>
 			<view name="apps.projects.views.projects"/>
 		</item>
-		<item name="Задать вопрос">
+		<item name="Контакты">
 			<url name="feedback_form"/>
 			<view name="apps.projects.views.projects"/>
 		</item>

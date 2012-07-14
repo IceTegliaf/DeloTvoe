@@ -67,6 +67,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     "django.contrib.auth.context_processors.auth",
     "apps.xml_menu.context_processors.cp_xml_menu",
+    "apps.projects.context_processors.cp_projects",
 )
 
 

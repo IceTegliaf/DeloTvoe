@@ -8,9 +8,10 @@ class Project(models.Model):
     description = models.TextField(_('text'), blank=True)
     is_enable = models.BooleanField(_('is enabled'), default=True)
     
-    class Media:
+    class Meta:
         verbose_name=_('project')
         verbose_name_plural=_('projects')
+        ordering=('importance',)
     
     def __unicode__(self):
         return self.name

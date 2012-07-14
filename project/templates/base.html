@@ -49,14 +49,26 @@
 			{% block content %}{% endblock content %}
 		</div>
 		<div class="span3">
-			
+		
+			{% with cp_projects.actual as projects %}
+				{% if projects %}
+				<div class="well">
+					<ul class="nav nav-list">
+		 				<li class="nav-header">Дела:</li>
+		 				{% for project in projects %}
+		 					<li><a href="{{ project.get_absolute_url }}">{{ project }}</a></li>
+		 				{% endfor %}			
+					</ul>
+				</div>
+				{% endif %}
+			{% endwith %}			
 		</div>
 		{% endblock page %}
 		</div>
 		
 		<hr/>
 		<footer>
-			<p>2012 - ДелоТвоё, все материалы сайты могут использоваться где и кем угодно только по совести</p>
+			<p>&copy;2012 - ДелоТвоё, все материалы сайты могут использоваться где и кем угодно только по совести</p>
 		</footer>		
 	</div>
 </body>
