@@ -81,7 +81,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'apps.compressor.middleware.CompressorMiddleware',
     'apps.tools.middleware.GlobalRequest',
-    'pagination.middleware.PaginationMiddleware',
+#    'pagination.middleware.PaginationMiddleware',
 #    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
 )
 
