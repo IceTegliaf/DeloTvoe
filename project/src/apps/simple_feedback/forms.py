@@ -1,6 +1,6 @@
 from django import forms
 from apps.simple_feedback.models import Feedback
-from captcha.fields import ReCaptchaField
+#from captcha.fields import ReCaptchaField
 from django.utils.translation import ugettext_lazy as _
 
 
