@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load staticpage %}
 
+{% block meta-title %}{% get_static_page "feedback" as page %}{{ page.title }} - ДелоТвоё{% endblock %}
+
 {% block content %}
 	{% get_static_page "feedback" as page %}
 	<div class="page-header">
