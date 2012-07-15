@@ -31,10 +31,16 @@
 				  <span class="icon-bar"></span>
 				</a>	    
 	    		<a class="brand" href="/">ДелоТвоё.РФ</a>	    
-
+				{% block navbar %}
+					<ul class="nav">			
+					{% for item in cp_xml_menu.root %}
+					  <li{% if item.selected %} class="active"{% endif %}><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
+					{% endfor %}
+					</ul>		
+				{% endblock navbar %}
 			</div>
 		</div>
-	</div>
+	</div>iv>
 	
 	<div class='container'>
 		<div class="row">	
