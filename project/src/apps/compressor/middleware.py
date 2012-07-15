@@ -34,7 +34,8 @@ class CompressorMiddleware(object):
         return None 
             
     def process_response(self, request, response):
-        if response.status_code == 200 and (not hasattr(request,'_apply_compresor') or request._apply_compresor):
+        #response.status_code == 200 and
+        if  (not hasattr(request,'_apply_compresor') or request._apply_compresor):
             self._apply(response, "js")
             self._apply(response, "css")
         return response 
