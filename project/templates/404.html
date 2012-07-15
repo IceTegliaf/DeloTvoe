@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticpage %}
+
+{% block meta-title %}{% get_static_page "page_404" as page %}{{ page.title }} - ДелоТвоё{% endblock %}
+
+{% block content %}
+	{% get_static_page "page_404" as page %}
+	<div class="page-header">
+		<h1>{{ page.title }}</h1>
+	</div>	
+	
+	<div class="alert alert-error">
+		{{ page.content|safe }}
+	</div>
+
+{% endblock content %}

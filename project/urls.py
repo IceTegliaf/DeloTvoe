@@ -9,8 +9,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', "apps.projects.views.index", name="projects_index"),
         
-    url(r'^feedback', include('apps.simple_feedback.urls')),
-    url(r'^project', include('apps.projects.urls')),                       
+    url(r'^feedback/', include('apps.simple_feedback.urls')),
+    url(r'^project/', include('apps.projects.urls')),                       
 #    url(r'^admin/filebrowser/', include('filebrowser.urls')),
     url(r'^admin/', include(admin.site.urls)),
 #    url(r'^tinymce/', include('tinymce.urls')),

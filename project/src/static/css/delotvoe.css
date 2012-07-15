@@ -16,3 +16,14 @@ body
 {
 	width:770px;
 }
+.form .errorlist
+{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #ffd4d4;
+	border: 1px solid #c98c8c;
+	color: 	#4b0000;
+	padding: 3px 6px 3px 6px;
+	width: 70%;
+}

@@ -16,13 +16,9 @@ FEEDBACK_EMAILS = get_settings("FEEDBACK_EMAILS", [])
 def form(req):
     out={}
     form_kwargs = {'initial': dict(map(lambda key: (key, force_unicode(req.GET[key])), req.GET))}
-    print "1"     
     if req.POST:
-        print "2"
         out['form'] = form = FeedbackForm(req.POST, **form_kwargs)
-        print "3"
         if form.is_valid():
-            print "4"
             feedback = form.save()
             
             if FEEDBACK_EMAILS:
@@ -38,9 +34,6 @@ def form(req):
                     FEEDBACK_EMAILS,
                     content_subtype='html'
                 )
-            
-            
-            print "5"
             return HttpResponseRedirect(reverse("feedback_ok"))
         
     else:
@@ -50,6 +43,5 @@ def form(req):
 
 @render_to
 def ok(req):
-    print "OK!!!"
     out={}
     return out
