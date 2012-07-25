@@ -225,7 +225,7 @@ class Menu(object):
         except:
             resolve_value = None
         if not resolve_value:
-            if not ignore_resolve_error and not self.req.xml_menu_ignore_resolve_error:
+            if not ignore_resolve_error and (hasattr(self.req, 'xml_menu_ignore_resolve_error') and not self.req.xml_menu_ignore_resolve_error):
                 raise Exception("xml_menu: can't resolve view for select current menu item, from URL\nURL: %s" % url)
             else:
                 return False                
